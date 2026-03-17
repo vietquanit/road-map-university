@@ -1,0 +1,82 @@
+{
+  "title": "Frontend Developer",
+  "description": "Build user interfaces, web interactions, and performant browser experiences.",
+  "sections": [
+    { "id": "web-basics", "title": "Web Basics" },
+    { "id": "core-frontend", "title": "Core Frontend" },
+    { "id": "advanced-ui", "title": "Advanced UI" }
+  ],
+  "nodes": [
+    {
+      "id": "internet",
+      "label": "Internet",
+      "description": "Understand HTTP, DNS, and how browsers request content.",
+      "section": "web-basics",
+      "resources": [
+        { "title": "MDN HTTP Overview", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview" }
+      ]
+    },
+    {
+      "id": "html",
+      "label": "HTML",
+      "description": "Create semantic page structure with modern HTML.",
+      "section": "core-frontend",
+      "resources": [
+        { "title": "MDN HTML Guide", "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML" }
+      ]
+    },
+    {
+      "id": "css",
+      "label": "CSS",
+      "description": "Style layouts and design responsive interfaces.",
+      "section": "core-frontend",
+      "resources": [
+        { "title": "MDN CSS Learning", "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS" }
+      ]
+    },
+    {
+      "id": "javascript",
+      "label": "JavaScript",
+      "description": "Build dynamic browser interactions and app logic.",
+      "section": "core-frontend",
+      "resources": [
+        { "title": "JavaScript.info", "url": "https://javascript.info/" }
+      ]
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "description": "Improve reliability with static types in frontend apps.",
+      "section": "advanced-ui",
+      "resources": [
+        { "title": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/" }
+      ]
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "description": "Build component-driven interfaces with stateful UIs.",
+      "section": "advanced-ui",
+      "resources": [
+        { "title": "React Docs", "url": "https://react.dev/learn" }
+      ]
+    },
+    {
+      "id": "state-management",
+      "label": "State Management",
+      "description": "Manage local and global UI state effectively.",
+      "section": "advanced-ui",
+      "resources": [
+        { "title": "React State Patterns", "url": "https://react.dev/learn/managing-state" }
+      ]
+    }
+  ],
+  "edges": [
+    { "source": "internet", "target": "html" },
+    { "source": "html", "target": "css" },
+    { "source": "css", "target": "javascript" },
+    { "source": "javascript", "target": "typescript" },
+    { "source": "javascript", "target": "react" },
+    { "source": "react", "target": "state-management" }
+  ]
+}

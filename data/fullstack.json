@@ -1,0 +1,73 @@
+{
+  "title": "Full Stack Developer",
+  "description": "Combine frontend and backend skills to build complete web applications.",
+  "sections": [
+    { "id": "frontend-track", "title": "Frontend Track" },
+    { "id": "backend-track", "title": "Backend Track" },
+    { "id": "integration", "title": "Integration" }
+  ],
+  "nodes": [
+    {
+      "id": "web-core",
+      "label": "Web Fundamentals",
+      "description": "Start with HTTP, browser behavior, and semantic HTML/CSS.",
+      "section": "frontend-track",
+      "resources": [
+        { "title": "MDN Learn Web Development", "url": "https://developer.mozilla.org/en-US/docs/Learn" }
+      ]
+    },
+    {
+      "id": "frontend-framework",
+      "label": "Frontend Framework",
+      "description": "Build rich UI using React and modern tooling.",
+      "section": "frontend-track",
+      "resources": [
+        { "title": "React Documentation", "url": "https://react.dev/" }
+      ]
+    },
+    {
+      "id": "api-design",
+      "label": "API Design",
+      "description": "Create reliable API contracts for clients and services.",
+      "section": "backend-track",
+      "resources": [
+        { "title": "API Design Guide", "url": "https://swagger.io/resources/articles/best-practices-in-api-design/" }
+      ]
+    },
+    {
+      "id": "database-modeling",
+      "label": "Database Modeling",
+      "description": "Design schemas and indexes for app data access patterns.",
+      "section": "backend-track",
+      "resources": [
+        { "title": "SQLBolt", "url": "https://sqlbolt.com/" }
+      ]
+    },
+    {
+      "id": "auth-security",
+      "label": "Auth and Security",
+      "description": "Secure users, sessions, and data boundaries.",
+      "section": "integration",
+      "resources": [
+        { "title": "OWASP Top 10", "url": "https://owasp.org/www-project-top-ten/" }
+      ]
+    },
+    {
+      "id": "deployment",
+      "label": "Deployment",
+      "description": "Deploy full stack apps with CI, cloud hosting, and observability.",
+      "section": "integration",
+      "resources": [
+        { "title": "Vercel Docs", "url": "https://vercel.com/docs" }
+      ]
+    }
+  ],
+  "edges": [
+    { "source": "web-core", "target": "frontend-framework" },
+    { "source": "web-core", "target": "api-design" },
+    { "source": "api-design", "target": "database-modeling" },
+    { "source": "frontend-framework", "target": "auth-security" },
+    { "source": "database-modeling", "target": "auth-security" },
+    { "source": "auth-security", "target": "deployment" }
+  ]
+}

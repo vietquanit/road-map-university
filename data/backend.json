@@ -1,0 +1,83 @@
+{
+  "title": "Backend Developer",
+  "description": "Learn server-side architecture, APIs, and data systems.",
+  "sections": [
+    { "id": "backend-foundation", "title": "Backend Foundation" },
+    { "id": "databases", "title": "Databases" },
+    { "id": "backend-architecture", "title": "Architecture" }
+  ],
+  "nodes": [
+    {
+      "id": "os-network",
+      "label": "OS and Networking",
+      "description": "Understand ports, sockets, and basic Linux networking.",
+      "section": "backend-foundation",
+      "resources": [
+        { "title": "Linux Journey Networking", "url": "https://linuxjourney.com/lesson/networking-basics" }
+      ]
+    },
+    {
+      "id": "language",
+      "label": "Backend Language",
+      "description": "Pick one language deeply, like Node.js, Go, or Python.",
+      "section": "backend-foundation",
+      "resources": [
+        { "title": "Node.js Learn", "url": "https://nodejs.org/en/learn" }
+      ]
+    },
+    {
+      "id": "rest-api",
+      "label": "REST APIs",
+      "description": "Design CRUD APIs with clear contracts and status codes.",
+      "section": "backend-foundation",
+      "resources": [
+        { "title": "RESTful API Tutorial", "url": "https://restfulapi.net/" }
+      ]
+    },
+    {
+      "id": "sql",
+      "label": "SQL",
+      "description": "Model relational data and write efficient queries.",
+      "section": "databases",
+      "resources": [
+        { "title": "PostgreSQL Docs", "url": "https://www.postgresql.org/docs/" }
+      ]
+    },
+    {
+      "id": "nosql",
+      "label": "NoSQL",
+      "description": "Use document or key-value databases where appropriate.",
+      "section": "databases",
+      "resources": [
+        { "title": "MongoDB University", "url": "https://learn.mongodb.com/" }
+      ]
+    },
+    {
+      "id": "auth",
+      "label": "Authentication",
+      "description": "Implement sessions, tokens, and access control.",
+      "section": "backend-architecture",
+      "resources": [
+        { "title": "OWASP Auth Cheatsheet", "url": "https://cheatsheetseries.owasp.org/" }
+      ]
+    },
+    {
+      "id": "scalability",
+      "label": "Scalability",
+      "description": "Plan caching, queues, and horizontal scaling strategies.",
+      "section": "backend-architecture",
+      "resources": [
+        { "title": "System Design Primer", "url": "https://github.com/donnemartin/system-design-primer" }
+      ]
+    }
+  ],
+  "edges": [
+    { "source": "os-network", "target": "language" },
+    { "source": "language", "target": "rest-api" },
+    { "source": "rest-api", "target": "sql" },
+    { "source": "rest-api", "target": "nosql" },
+    { "source": "sql", "target": "auth" },
+    { "source": "nosql", "target": "auth" },
+    { "source": "auth", "target": "scalability" }
+  ]
+}

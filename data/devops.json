@@ -1,0 +1,82 @@
+{
+  "title": "DevOps Engineer",
+  "description": "Automate delivery pipelines, infrastructure, and operations reliability.",
+  "sections": [
+    { "id": "system-basics", "title": "System Basics" },
+    { "id": "containers", "title": "Containers and Orchestration" },
+    { "id": "operations", "title": "Operations" }
+  ],
+  "nodes": [
+    {
+      "id": "linux",
+      "label": "Linux",
+      "description": "Use Linux command line and core system administration.",
+      "section": "system-basics",
+      "resources": [
+        { "title": "Linux Foundation Intro", "url": "https://training.linuxfoundation.org/resources/open-source-guides/" }
+      ]
+    },
+    {
+      "id": "scripting",
+      "label": "Scripting",
+      "description": "Automate repetitive workflows with shell scripts.",
+      "section": "system-basics",
+      "resources": [
+        { "title": "GNU Bash Manual", "url": "https://www.gnu.org/software/bash/manual/" }
+      ]
+    },
+    {
+      "id": "git-ci",
+      "label": "Git and CI",
+      "description": "Use version control and pipeline automation for deployments.",
+      "section": "system-basics",
+      "resources": [
+        { "title": "GitHub Actions Docs", "url": "https://docs.github.com/en/actions" }
+      ]
+    },
+    {
+      "id": "docker",
+      "label": "Docker",
+      "description": "Package applications into reproducible containers.",
+      "section": "containers",
+      "resources": [
+        { "title": "Docker Docs", "url": "https://docs.docker.com/" }
+      ]
+    },
+    {
+      "id": "kubernetes",
+      "label": "Kubernetes",
+      "description": "Deploy and manage container workloads at scale.",
+      "section": "containers",
+      "resources": [
+        { "title": "Kubernetes Docs", "url": "https://kubernetes.io/docs/home/" }
+      ]
+    },
+    {
+      "id": "iac",
+      "label": "Infrastructure as Code",
+      "description": "Provision and manage infrastructure with code.",
+      "section": "operations",
+      "resources": [
+        { "title": "Terraform Docs", "url": "https://developer.hashicorp.com/terraform/docs" }
+      ]
+    },
+    {
+      "id": "monitoring",
+      "label": "Monitoring",
+      "description": "Track metrics, logs, and alerts for reliable systems.",
+      "section": "operations",
+      "resources": [
+        { "title": "Prometheus Docs", "url": "https://prometheus.io/docs/introduction/overview/" }
+      ]
+    }
+  ],
+  "edges": [
+    { "source": "linux", "target": "scripting" },
+    { "source": "scripting", "target": "git-ci" },
+    { "source": "git-ci", "target": "docker" },
+    { "source": "docker", "target": "kubernetes" },
+    { "source": "kubernetes", "target": "iac" },
+    { "source": "iac", "target": "monitoring" }
+  ]
+}
